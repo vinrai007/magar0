@@ -13,6 +13,7 @@ const fs = require('fs');
 // const MONGO_URL = 'mongodb+srv://chat:t0x93dSLr1hhLsKo@clus1.quoixqc.mongodb.net/?retryWrites=true&w=majority';
 
 dotenv.config();
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGO_URL, (err) => {
   if (err) throw err;
 });
